@@ -9,6 +9,7 @@
         </div>
       </div>
       <div class="row text-center">
+        <div></div>
         <div class="col-md-8">
           <form action="#" class="contact-form">
             <div class="row">
