@@ -9,9 +9,7 @@ class CustomerService {
     extractCustomerData(payload) {
         const customer = {
             name: payload.name,
-            email: payload.email,
-            address: payload.address,
-            phone: payload.phone,
+            password: payload.password,
         };
         // Remove undefined fields
         Object.keys(customer).forEach(

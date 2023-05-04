@@ -1,16 +1,16 @@
 const express = require("express");
-const users = require("../controllers/user.controller");
+const customers = require("../controllers/customer.controller");
 
 const router = express.Router();
 
 router.route("/")
-    .get(users.findAll)
-    .post(users.create)
-    .delete(users.deleteAll);
+    .get(customers.findAll)
+    .post(customers.create)
+    .delete(customers.deleteAll);
 
 router.route("/:id")
-    .get(users.findOne)
-    .put(users.update)
-    .delete(users.delete);
+    .get(customers.findOne)
+    .put(customers.update)
+    .delete(customers.delete);
 
 module.exports = router;
