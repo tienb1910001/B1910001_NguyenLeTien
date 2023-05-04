@@ -30,4 +30,11 @@ export default {
 </template>
 
 <style>
+.page {
+  margin: auto;
+}
+
+.hidden {
+  display: none;
+}
 </style>

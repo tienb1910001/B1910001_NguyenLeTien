@@ -17,25 +17,27 @@
         </div>
         <div class="mt-3 row justify-content-around align-items-center">
           <button
-            class="btn btn-sm btn-primary col-lg-3"
+            class="button col-lg-3"
             role="button"
             @click="refreshList()"
+            style="background-color: #ffb700;"
           >
-            <i class="fas fa-redo"></i> Làm mới
+            Làm mới
           </button>
           <button
-            class="btn btn-sm btn-success col-lg-3"
+            class="button col-lg-3"
             role="button"
             @click="goToAddProduct"
           >
-            <i class="fas fa-plus"></i> Thêm sản phẩm
+            Thêm sản phẩm
           </button>
           <button
-            class="btn btn-sm btn-danger col-lg-3"
+            class="button col-lg-3"
             role="button"
             @click="removeAllProducts"
+            style="background-color: #d00000;"
           >
-            <i class="fas fa-trash"></i> Xóa tất cả
+           Xóa tất cả
           </button>
         </div>
       </div>

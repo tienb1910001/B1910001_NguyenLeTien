@@ -1,5 +1,5 @@
 <template>
-  <div class="container" style="display: flex">
+  <div class="container">
     <br />
     <div v-if="product" class="page">
       <h4 style="font-weight: 700; text-align: center">Thêm sản phẩm mới</h4>

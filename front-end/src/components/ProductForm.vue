@@ -2,7 +2,7 @@
   <Form
     @submit="submitProduct"
     :validation-schema="productFormSchema"
-    style="margin-left: -22%"
+    class="container"
   >
     <div class="form-group">
       <label for="name">Tên</label>
@@ -26,13 +26,6 @@
       />
       <ErrorMessage name="image" class="error-feedback" />
     </div>
-    <!-- <div class="from-group">
-      <img
-        :src="productLocal.image"
-        style="width: 70%"
-      />
-      
-    </div> -->
     <div class="form-group">
       <label for="mota">Mô tả sản phẩm</label>
       <Field
@@ -55,7 +48,7 @@
       />
       <ErrorMessage name="price" class="error-feedback" />
     </div>
-    <div class="form-group form-check">
+    <div class="form-group form-check margin-top-10">
       <input
         name="favorite"
         type="checkbox"
@@ -67,17 +60,18 @@
       </label>
     </div>
 
-    <div style="margin-left: 20%">
-      <button class="btn btn-primary" style="width: 100%; text-align: center">
+    <div class="margin-top-10">
+      <button class="button" style="background-color: #0077b6;">
         Lưu
       </button>
       &nbsp;
       <button
         v-if="productLocal._id"
         type="button"
-        class="btn btn-danger"
+        class="button "
+        style="background-color: #d00000;"
         @click="deleteProduct"
-        style="width: 100%; text-align: center; height: 40px"
+        
       >
         Xóa
       </button>

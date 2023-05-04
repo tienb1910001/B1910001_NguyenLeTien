@@ -20,25 +20,22 @@
         <div class="d-flex justify-content-evenly">
           <div>
             <button
-              class="button btn-primary"
+              class="button"
               role="button"
               @click="refreshList"
+              style="background-color: #ffb700"
             >
-              <i class="fas fa-repeat"></i>Làm mới
+              Làm mới
             </button>
           </div>
           <div>
             <button class="button" role="button" @click="goToAddUser">
-              <i class="fas fa-plus"></i> Thêm mới
+              Thêm mới
             </button>
           </div>
           <div>
-            <button
-              class="button btn-danger"
-              role="button"
-              @click="removeAllUsers"
-            >
-              <i class="fas fa-trash"></i> Xóa tất cả
+            <button class="button" role="button" @click="removeAllUsers" style="background-color: #d00000;">
+              Xóa tất cả
             </button>
           </div>
         </div>

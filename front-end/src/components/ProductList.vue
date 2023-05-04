@@ -18,7 +18,7 @@ export default {
 
 <template>
     <div class="container">
-        <table class="table ">
+        <table class="table" style="text-align: center;">
             <thead>
                 <tr>
                     <th scope="col">Stt</th>
@@ -32,7 +32,7 @@ export default {
             </thead>
             <tbody v-for="(product, index) in products" :key="product._id" :class="{ active: index === activeIndex }"
                 @click="updateActiveIndex(index)">
-                <tr style="text-align: center;padding: 10px;">
+                <tr style="text-align: center; margin-top: 20px;">
                     <th scope="row">{{ index + 1 }}</th>
                     <td><img v-bind:src="product.image" class="card-img-top" alt="..." style="height:80px ;width: 80px;">
                     </td>
@@ -40,14 +40,14 @@ export default {
                     <td>{{ product.describe }}</td>
                     <td>{{ product.price }} VNĐ</td>
                     <!-- {{product._id}} -->
-                    <td class="btn btn-success " data-bs-toggle="modal" data-bs-target="#myModal" style="margin-top: 10px;">
+                    <td class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#myModal" style="margin-top: 10px;">
                         Xem chi tiết</td>
                     <td>
                         <router-link :to="{
                             name: 'product-edit',
                             params: { id: product._id },
                         }">
-                            <i class='fas fa-edit' style="font-size:20px;background-color:greenyellow;padding: 10px;"></i>
+                            <i class='fas fa-edit'></i>
                         </router-link>
                     </td>
                 </tr>
