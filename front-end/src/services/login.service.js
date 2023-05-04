@@ -1,7 +1,7 @@
 import createApiClient from "./api.service";
 
-class AdminService {
-    constructor(baseUrl = "/api/admins") {
+class LoginService {
+    constructor(baseUrl = "/api/customers") {
         this.api = createApiClient(baseUrl);
     }
     async getAll() {
@@ -24,4 +24,4 @@ class AdminService {
     }
 }
 
-export default new AdminService();
+export default new LoginService();
