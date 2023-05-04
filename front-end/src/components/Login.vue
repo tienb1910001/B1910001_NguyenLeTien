@@ -1,27 +1,36 @@
- <template>
-    <div class="container ">
-        <div class="form-group">
-
-        
-        <form @submit.prevent="login">
-            <h2 class="mb-3">Login</h2>
-            <div class="input">
-                <label for="email">Email address</label>
-                <input class="form-control" type="text" name="email" placeholder="email@adress.com" />
-            </div>
-            <div class="input">
-                <label for="password">Password</label>
-                <input class="form-control" type="password" name="password" placeholder="password123" />
-            </div>
-            <div class="alternative-option mt-4">
-                You don't have an account? <span @click="moveToRegister">Register</span>
-            </div>
-            <button type="submit" class="mt-4 btn-pers" id="login_button">
-                Login
-            </button>
-        </form>
+<template>
+  <div class="container">
+    <div class="form-group">
+      <form @submit.prevent="login">
+        <h2 class="mb-3">Login</h2>
+        <div class="input">
+          <label for="email">Email address</label>
+          <input
+            class="form-control"
+            type="text"
+            name="email"
+            placeholder="email@adress.com"
+          />
+        </div>
+        <div class="input">
+          <label for="password">Password</label>
+          <input
+            class="form-control"
+            type="password"
+            name="password"
+            placeholder="password123"
+          />
+        </div>
+        <div class="alternative-option mt-4">
+          You don't have an account?
+          <span @click="moveToRegister">Register</span>
+        </div>
+        <button type="submit" class="mt-4 btn-pers" id="login_button">
+          Login
+        </button>
+      </form>
     </div>
-    </div>
+  </div>
 </template>
 <!-- 
 <script>
@@ -70,51 +79,42 @@ export default {
 
 <script>
 import UserService from "@/services/user.service";
-import axios from 'axios'
+import axios from "axios";
 export default {
-    name: 'Login',
-    data() {
-        return {
-            user:{},
-            input: {
-                username: "",
-                password: ""
-            }
+  name: "Login",
+  data() {
+    return {
+      user: {},
+      input: {
+        username: "",
+        password: "",
+      },
+    };
+  },
+
+  methods: {
+    async login() {
+      try {
+        this.user = await UserService.get(this.id);
+        alert(this.user.username).data;
+        if (this.input.username != "" && this.input.password != "") {
+          if (
+            this.input.username == "letien" &&
+            this.input.password == "letien"
+          ) {
+            this.$router.push({ name: "home" });
+          } else {
+            alert("The username and / or password is incorrect");
+          }
+        } else {
+          alert("A username and password must be present");
         }
+      } catch (error) {
+        console.log(error);
+      }
     },
-    
-    methods: {
-    
-        async login() {
-            try {
-                this.user = await UserService.get(this.id);
-                alert(this.user.username).data;
-                if (this.input.username != "" && this.input.password != "") {
-                    if (this.input.username == "letien" && this.input.password == "letien") {
-                        this.$router.push({ name: "home" });
-                        
-                    } else {
-                        alert("The username and / or password is incorrect");
-                    }
-                } else {
-                    alert("A username and password must be present");
-                }
-            
-            } catch (error) {
-                    console.log(error);
-            }
-        }
-    }
-}
+  },
+};
 </script>
 
-<style scoped>
-#login {
-    width: 500px;
-    border: 1px solid #CCCCCC;
-    background-color: #FFFFFF;
-    margin: auto;
-    margin-top: 200px;
-    padding: 20px;
-}
-</style>
+<style scoped></style>
