@@ -30,6 +30,7 @@ export default {
       try {
         await UserService.create(data);
         alert("người dùng đã được thêm thành công.");
+        this.$router.push({ name: "user" });
       } catch (error) {
         console.log(error);
       }

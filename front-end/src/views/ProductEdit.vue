@@ -50,6 +50,7 @@
                 try {
                     await ProductService.update(this.product._id, data);
                     alert("Sản phẩm được cập nhật thành công.");
+                    this.$router.push({ name: "product" });
                     // this.message = "Liên hệ được cập nhật thành công.";
                 } catch (error) {
                     console.log(error);
