@@ -7,7 +7,6 @@ export default {
   components: {
     AppHeader,
     AppFooter,
-    Login,
     Home,
   },
 };
@@ -31,12 +30,4 @@ export default {
 </template>
 
 <style>
-.page {
-  max-width: 400px;
-  margin: auto;
-}
-
-.hidden {
-  display: none;
-}
 </style>

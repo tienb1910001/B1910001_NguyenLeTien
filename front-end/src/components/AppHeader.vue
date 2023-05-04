@@ -19,6 +19,9 @@
                         <li class="nav-item">
                             <router-link :to="{ name: 'contact' }" class="nav-link ">Liên hệ</router-link>
                         </li>
+                        <li class="nav-item">
+                            <router-link :to="{ name: 'login' }" class="nav-link ">Đăng nhập</router-link>
+                        </li>
                     </ul>
                     <div class="d-flex ">
                         <div class="dropdown">
