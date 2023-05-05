@@ -15,7 +15,7 @@
         <div class="p-1">
             <strong></strong>
             <img v-bind:src="product.image" class="card-img-top" alt="..."
-                style="height:350px ;width: 60%;display: block; margin-left: auto; margin-right: auto;">
+                style="width: 50%;display: block; margin-left: auto; margin-right: auto;">
         </div>
         <div class="p-1">
             <strong>Mô tả về sản phẩm:</strong>

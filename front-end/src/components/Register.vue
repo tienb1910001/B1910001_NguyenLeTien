@@ -30,7 +30,16 @@
           />
           <ErrorMessage name="password" class="error-feedback" />
         </div>
-
+        <div class="form-group">
+          <label for="repassword">Nhập lại mật khẩu</label>
+          <Field
+            name="repassword"
+            type="password"
+            class="form-control"
+            v-model="registerLocal.repassword"
+          />
+          <ErrorMessage name="repassword" class="error-feedback" />
+        </div>
         <div class="form-group margin-top-20 margin-bottom-20">
           <button class="button">Đăng ký</button>
         </div>
@@ -56,6 +65,7 @@ export default {
     const registerFormSchema = yup.object().shape({
       name: yup.string().required("Tài khoản không được để trống."),
       password: yup.string().required("Mật khẩu không được để trống"),
+      repassword:yup.string().required("không được để trống").oneOf([yup.ref('password'), null], 'Mật khẩu không khớp'),
     });
     return {
       registerLocal: {

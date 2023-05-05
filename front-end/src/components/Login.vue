@@ -55,7 +55,9 @@ export default {
     ErrorMessage,
   },
   emits: ["submit:register"],
-
+  prop:{
+    check: true,
+  },
   data() {
     const registerFormSchema = yup.object().shape({
       name: yup.string().required("Tài khoản không được để trống."),
@@ -70,21 +72,26 @@ export default {
     };
   },
   methods: {
-    async submitLogin(data) {
-      axios
-        .post("http://localhost:3001/api/customers", this.registerLocal)
-        .then(({ data }) => {
-          console.log(data.status);
-          try {
-            if (data.status === true) {
-              alert("Đăng nhập thành công");
-            } else {
-              alert("Đăng nhập thất bại");
-            }
-          } catch (err) {
-            console.log(error);
+    async submitLogin() {
+      try {
+        if (
+          this.registerLocal.name != "" &&
+          this.registerLocal.password != ""
+        ) {
+          if (
+            this.registerLocal.name == "letien" &&
+            this.registerLocal.password == "letien"
+          ) {
+            this.$router.push({ name: "home" });
+          } else {
+            alert("The username and / or password is incorrect");
           }
-        });
+        } else {
+          alert("A username and password must be present");
+        }
+      } catch (error) {
+        console.log(error);
+      }
     },
   },
 };

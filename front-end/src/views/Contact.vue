@@ -14,20 +14,27 @@
           <form action="#" class="contact-form">
             <div class="row">
               <div class="col-xl-6">
-                <input type="text" placeholder="Tên">
+                <input type="text" placeholder="Tên" />
               </div>
               <div class="col-xl-6">
-                <input type="text" placeholder="mail">
+                <input type="text" placeholder="Mail" />
               </div>
               <div class="col-xl-6">
-                <input type="text" placeholder="Vấn đề">
+                <input type="text" placeholder="Vấn đề" />
               </div>
               <div class="col-xl-6">
-                <input type="text" placeholder="Mô tả">
+                <input type="text" placeholder="Mô tả" />
               </div>
               <div class="col-xl-12">
-                <textarea placeholder="message" cols="30" rows="10" style="resize: none; border-radius: 6px;"></textarea>
-                <input type="submit" value="send message">
+                <textarea
+                  placeholder="message"
+                  cols="30"
+                  rows="10"
+                  style="resize: none; border-radius: 6px"
+                ></textarea>
+              </div>
+              <div class="col-xl-12">
+                <button type="submit" class="button w-100">Gửi</button>
               </div>
             </div>
           </form>
@@ -35,7 +42,7 @@
         <div class="col-md-4">
           <div class="single-contact">
             <i class="fa fa-location-dot"></i>
-            <h5>Address</h5>
+            <h5>Địa chỉ</h5>
             <p>CIT-CTU</p>
           </div>
           <div class="single-contact">
@@ -69,8 +76,8 @@
 a {
   text-decoration: none;
   color: #333;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .section-title {
@@ -108,7 +115,7 @@ a {
   content: "";
   width: 50px;
   height: 2px;
-  background-color: #FF7200;
+  background-color: #ff7200;
   left: 0;
   bottom: 0;
   left: 50%;
@@ -144,7 +151,7 @@ textarea {
   top: 0;
   background-color: white;
   z-index: -1;
-  opacity: .85;
+  opacity: 0.85;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
 }
 
@@ -162,7 +169,7 @@ textarea {
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  background-color: #FF7200;
+  background-color: #ff7200;
   width: 40px;
   height: 40px;
   line-height: 40px;
@@ -179,24 +186,5 @@ textarea {
 .single-contact p {
   font-size: 15px;
   font-weight: 400;
-}
-
-.contact-form input[type="submit"] {
-  background-color: #FF7200;
-  border: 0px;
-  cursor: pointer;
-  font-size: 16px;
-  -webkit-transition: .4s;
-  transition: .4s;
-  color: rgb(255, 255, 255);
-}
-
-.contact-form input[type="submit"]:hover {
-  background-color: #CC5B00
-}
-
-.contact-form input:focus,
-textarea:focus {
-  border-color: #CC5B00
 }
 </style>
